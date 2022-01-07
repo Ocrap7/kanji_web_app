@@ -1,24 +1,24 @@
 {
-   "type": "mysql",
-   "host": "localhost",
-   "port": 3306,
-   "username": "test",
-   "password": "test",
-   "database": "test",
+   "type": "postgres",
+   "host": "10.0.0.16",
+   "port": 5432,
+   "username": "postgres",
+   "password": "googer",
+   "database": "kanji_web_app",
    "synchronize": true,
    "logging": false,
    "entities": [
-      "src/entity/**/*.ts"
+      "build/src/api/v1/models/**/*.js"
    ],
    "migrations": [
-      "src/migration/**/*.ts"
+      "build/src/api/v1/migration/**/*.js"
    ],
    "subscribers": [
       "src/subscriber/**/*.ts"
    ],
    "cli": {
-      "entitiesDir": "src/entity",
-      "migrationsDir": "src/migration",
+      "entitiesDir": "src/api/v1/entity",
+      "migrationsDir": "src/api/v1/migration",
       "subscribersDir": "src/subscriber"
    }
 }
